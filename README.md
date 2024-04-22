@@ -1,17 +1,17 @@
 <div align="center">
 
-  <img src="./public/logo-dark.png" alt="logo" width="90" height="auto">
+  <img src="./public/icon.png" alt="logo" width="90" height="auto">
 
-  <h2>The Wild Oasis</h2>
+  <h2>WorldWise</h2>
 
   <h3>
-    <a href="https://the-wild-oasis-hfo.vercel.app/">
+    <a href="https://worldwise-track.netlify.app/">
       <strong>Demo Website</strong>
     </a>
   </h3>
 
   <div align="center">
-    <a href="https://the-wild-oasis-hfo.vercel.app/">View Demo</a>
+    <a href="https://worldwise-track.netlify.app/">View Demo</a>
     •
     <a href="https://github.com/Sujitroy98/the-wild-oasis/issues">Report Bug</a>
   </div>
@@ -32,140 +32,82 @@
 
 <!-- Brief -->
 <p align="center">
-The Wild Oasis hotel front office app is a full-featured React web application that allows hotel employees to manage cabins, bookings, and guests. The app uses Supabase for its backend and implements a variety of advanced React techniques, such as HOCs, the Compound Component Pattern, and React Query.
+WorldWise is a React application that allows users to explore cities from around the world. It provides information about various cities, including their locations on a map, details about each city, and the ability to create and delete cities.
 </p>
 
 <!-- Screenshot -->
-<a align="center" href="https://the-wild-oasis-hfo.vercel.app/">
+<a align="center" href="https://worldwise-track.netlify.app/">
 
-![Screenshot](./public/thumbnail-preview.png)
+![Screenshot](./public/cityMap.png)
+![Screenshot](./public/homePage.png)
 
 </a>
 
-## Table of contents
-
-- [Table of contents](#table-of-contents)
-- [Key Features](#key-features)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I Learned](#what-i-learned)
-  - [Installation](#installation)
-  - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
 
 ## Key Features
 
-- Users of the app are hotel employees. They need to be logged into the application to perform tasks
-
-- New users can only be signed up inside the applications (to guarantee that only actual hotel employees can get accounts)
-
-- Users should be able to upload an avatar, and change their name and password
-
-- App needs a table view with all cabins, showing the cabin photo, name, capacity, price, and current discount
-
-- Users should be able to update or delete a cabin, and to create new cabins (including uploading a photo)
-
-- App needs a table view with all bookings, showing arrival and departure dates, status, and paid amount, as well as cabin and guest data
-
-- The booking status can be "unconfirmed" (booked but not yet checked in), "checked in", or "checked out". The table should be filterable by this important status
-
-- Other booking data includes: number of guests, number of nights, guest observations, whether they booked breakfast, breakfast price
-
-- Users should be able to delete, check in, or check out a booking as the guest arrives
-
-- Bookings may not have been paid yet on guest arrival. Therefore, on check in, users need to accept payment (outside the app), and then confirm that payment has been received (inside the app)
-
-- On check in, the guest should have the ability to add breakfast for the entire stay, if they hadn't already
-
-- Guest data should contain: full name, email, national ID, nationality, and a country flag for easy identification
-
-- The initial app screen should be a dashboard, to display important information for the last 7, 30, or 90 days:
-
-  - A list of guests checking in and out on the current day. Users should be able to perform these tasks from here
-
-  - Statistics on recent bookings, sales, check ins, and occupancy rate
-
-  - A chart showing all daily hotel sales, showing both "total" sales and "extras" sales (only breakfast at the moment)
-
-  - A chart showing statistics on stay durations, as this is an important metric for the hotel
-
-- Users should be able to define a few application-wide settings: breakfast price, min and max nights/booking, max guests/booking
-
-- Dark mode
+- View a list of cities and their locations on a map.
+- Click on a city marker to see detailed information about the city.
+- Create a new city by providing its details.
+- Delete a city from the list.
 
 ## My process
 
 ### Built with
 
-- React
-- Supabase
-- React Query
-- React Router
-- React Hook Form
-- React Hot Toast
-- Recharts
-- Styled Components
-- Vite
+The WorldWise application uses the following open-source libraries:
 
-### What I Learned
+- [React](https://reactjs.org)
+- [React Router](https://reactrouter.com)
+- [Leaflet](https://leafletjs.com)
+- [React Leaflet](https://react-leaflet.js.org)
+- [React DatePicker](https://github.com/Hacker0x01/react-datepicker)
+- [JSON Server](https://github.com/typicode/json-server)
+- [ESLint](https://eslint.org)
 
-- **React Fundamentals:** I gained a solid understanding of React, including components, state management, and routing, allowing me to build dynamic user interfaces.
-
-- **Authentication and User Management:** I implemented user authentication using Supabase, ensuring secure access for hotel employees and learned to manage user profiles effectively.
-
-- **Form Handling:** I became proficient in managing forms with React Hook Form, simplifying form validation, submission, and data handling.
-
-- **Data Fetching and Caching:** React Query was employed to fetch and cache data, enhancing the performance and responsiveness of the application.
-
-- **Real-time Updates:** I integrated real-time data updates using Supabase, enabling instant changes to cabin and booking data.
-
-- **Responsive UI Design:** Styled Components were used to create responsive and visually appealing user interfaces that adapt to various screen sizes.
-
-- **Toast Notifications:** React Hot Toast added user-friendly notifications for various actions within the app, improving the overall user experience.
-
-- **Data Visualization:** Recharts was employed for creating charts and visual representations of vital statistics, aiding in data analysis and decision-making.
-
-- **Routing and Navigation:** React Router facilitated smooth navigation and seamless transitions between different views and pages within the application.
-
-- **Settings Management:** I learned to allow users to configure application-wide settings, such as breakfast pricing and booking constraints.
-
-- **Higher-Order Components (HOC):** I utilized Higher-Order Components to enhance code reusability and share common functionalities among multiple components.
-
-- **Compound Component Pattern:** I implemented the Compound Component Pattern to create cohesive and reusable component groups, improving the organization and maintainability of the code.
-
-- **Dark Mode Implementation:** Dark mode was implemented to offer users a personalized visual experience and accommodate different preferences.
-
-- **Git Version Control:** I practiced effective version control using Git, allowing for code management, and tracking project changes.
-
-- **Project Planning and Management:** I gained experience in planning and managing a large-scale project, including feature development, bug fixing, and testing.
-
-By building "The Wild Oasis" project with these technologies and concepts, I've developed a comprehensive set of skills and knowledge that can be applied to future projects and real-world scenarios. This experience has not only expanded my technical expertise but also improved my problem-solving capabilities.
 
 ### Installation
 
-- Clone this repo:
+The WorldWise application uses a JSON server to provide city data. By default, the server is configured to run on `http://localhost:8000`. If you need to change the server URL, modify the `BASE_URL` constant in the `CitiesContext` component located in `src/contexts/CitiesContext.jsx`.
 
-```sh
-git clone https://github.com/Sujitroy98/the-wild-oasis.git
+## Usage
+
+1. Start the JSON server to serve the city data:
+
+```shell
+npm run server
 ```
 
-- Install dependencies:
+2. Start the development server:
 
-```sh
-npm install
-```
-
-- Build command:
-
-```sh
-npm run build
-```
-
-- Live server:
-
-```sh
+```shell
 npm run dev
 ```
+
+
+3. Open your browser and navigate to `http://localhost:3000` to access the WorldWise application.
+
+### Authentication
+
+The WorldWise application includes authentication functionality. You can log in using the following credentials:
+
+- Email: `jack@example.com`
+- Password: `qwerty`
+
+## Available Scripts
+
+In the project directory, you can run the following scripts:
+
+- `npm run dev`: Starts the development server.
+- `npm run build`: Builds the application for production.
+- `npm run preview`: Serves the production build locally for preview.
+- `npm run server`: Starts the JSON server to serve city data.
+
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues and submit pull requests to help improve the WorldWise application.
+
 
 ### Author
 

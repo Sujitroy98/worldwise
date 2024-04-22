@@ -12,12 +12,6 @@ import CountryList from './components/CountryList';
 import Form from './components/Form';
 import SpinnerFullPage from './components/SpinnerFullPage';
 
-// import Homepage from './pages/Homepage';
-// import Product from './pages/Product';
-// import Pricing from './pages/Pricing';
-// import Login from './pages/Login';
-// import AppLayout from './pages/AppLayout';
-// import PageNotFound from './pages/PageNotFound';
 
 const Homepage = lazy(() => import('./pages/Homepage'));
 const Product = lazy(() => import('./pages/Product'));
